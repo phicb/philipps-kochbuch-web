@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Philenas Kochbuch</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="kopf">
+    <a href="#/" class="kopf-titel">🍳 Philenas Kochbuch</a>
+  </header>
+
+  <main id="inhalt">
+    <!-- Übersicht -->
+    <section id="ansicht-liste" hidden>
+      <div class="suchleiste">
+        <input type="search" id="suchfeld" placeholder="Suchen … (Titel, Zutat, Tag)" autocomplete="off">
+      </div>
+      <div id="filter-kategorien" class="chips" aria-label="Kategorien"></div>
+      <div id="filter-tags" class="chips chips-klein" aria-label="Tags"></div>
+      <p id="treffer-info" class="treffer-info"></p>
+      <div id="rezept-liste" class="karten"></div>
+    </section>
+
+    <!-- Detailansicht -->
+    <section id="ansicht-detail" hidden></section>
+
+    <!-- Lade-/Fehlerzustand -->
+    <section id="ansicht-status">
+      <p class="status-text">Rezepte werden geladen …</p>
+    </section>
+  </main>
+
+  <footer class="fuss">
+    <span id="anzahl-info"></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
